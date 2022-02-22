@@ -42,7 +42,7 @@ Here is how the project will look:
 
 This is how the picavet carabiner will attach the outer box:
 
-![Picavett_Mechanism](/ThePenguin/media/Picavet.gif)
+![Picavet_Mechanism](/media/Picavet.gif)
 
 ## Resources / Bill of Materials:
 
