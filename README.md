@@ -1,7 +1,7 @@
 # ThePenguin
 
 #### Link to Google Doc: [Here](https://docs.google.com/document/d/1Sf24Mtsomg_Ii05QBMTFbYv3pOCejpcIwBJ-gdY9PqM/edit?usp=sharing)
-
+#### Link to Schedule: [Here](https://docs.google.com/spreadsheets/d/1rT3I_5nSTPqYd5fbr5m2Sy22h2AO5hXBsvJUreVN8uk/edit?usp=sharing)
 
 ## The Problem & Solution
 
@@ -55,8 +55,10 @@ Here is how the project will look:
 ## Credit/Inspiration:
 
 This project provided most of our inspiration:
+
 [Project1](https://wTww.instructables.com/Kite-Aerial-Photography-Picavet-System-Fun-Simple-/)
-[Project2]http://richardhayler.blogspot.com/2015/09/skycademy-hab-payload-testing-with-kite.html
+
+[Project2](http://richardhayler.blogspot.com/2015/09/skycademy-hab-payload-testing-with-kite.html)
 
 Finally, thanks to Mr. Dierolf for the idea and also Mr. Miller for advice
 
