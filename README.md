@@ -1,7 +1,9 @@
 # ThePenguin
 
 #### Link to Google Doc: [Here](https://docs.google.com/document/d/1Sf24Mtsomg_Ii05QBMTFbYv3pOCejpcIwBJ-gdY9PqM/edit?usp=sharing)
+
 #### Link to Schedule: [Here](https://docs.google.com/spreadsheets/d/1rT3I_5nSTPqYd5fbr5m2Sy22h2AO5hXBsvJUreVN8uk/edit?usp=sharing)
+
 
 ## The Problem & Solution
 
@@ -24,25 +26,27 @@ If the scope of the project is too big, we’ll scale down to only using the out
 
 The main risk will be in dropping the payload so that it isn’t damaged and in making sure the parachute works so that the payload lands down smoothly. Here are the different release mechanisms we’re considering:
 
-![](https://github.com/clyman88/ThePenguin/blob/main/media/IMG_7485.JPG)
+![Release_Mechanism_Ideas](https://github.com/clyman88/ThePenguin/blob/main/media/IMG_7485.JPG)
 
 
 ## How Code Will Work
 
-The code for this project will involve learning how to use the gyroscope and coding the servo(s) to release the payload. At a certain elevation or time limit, the servo will activate, dropping the payload. If there’s spare time, to take this a step further, the servo could be activated with a remote signal.
+The code for this project will involve learning how to use a gyroscope (basically, a souped-up accelerometer that is able to record an object's path through space) and coding the servo(s) to release the payload. At a certain elevation or time limit, the servo will activate, dropping the payload. If there’s spare time, to take this a step further, the servo could be activated with a remote signal.
 
 
 ## Design
 
 Here is how the project will look:
 
-
 ![Penguin Diagrams](https://github.com/clyman88/ThePenguin/blob/main/media/IMG_7484.jpg)
 
+This is how the picavet carabiner will attach the outer box:
+
+![Picavett_Mechanism](https://github.com/clyman88/ThePenguin/blob/main/media/Picavet.jpg)
 
 ## Resources / Bill of Materials:
 
-* Kite materials: delta kite, kite line, & a handle 
+* Kite materials: [delta kite, kite line, & a handle](https://www.amazon.com/Breeze-Rainbow-Conyne-Delta-6-Feet/dp/B00C9T4HDG/ref=sr_1_2?crid=XFQJCKMACLOF&keywords=7%2Bfoot%2Bdelta%2Bkite&qid=1644852021&sprefix=7%2Bfoot%2Bdelta%2Bkite%2Caps%2C76&sr=8-2&th=1) 
 * Wood planks from the Sigma Lab (anchored using glue, T-slots, or tape. Both the outer- and inner-box will be made of wood.
 * 3 medium sized washers and string/line to link them
 * 2 picavet carabringers
@@ -54,14 +58,8 @@ Here is how the project will look:
 
 ## Credit/Inspiration:
 
-This project provided most of our inspiration:
-
+This project provided us inspiration:
 [Project1](https://wTww.instructables.com/Kite-Aerial-Photography-Picavet-System-Fun-Simple-/)
+[Project2]http://richardhayler.blogspot.com/2015/09/skycademy-hab-payload-testing-with-kite.html
 
-[Project2](http://richardhayler.blogspot.com/2015/09/skycademy-hab-payload-testing-with-kite.html)
-
-Finally, thanks to Mr. Dierolf for the idea and also Mr. Miller for advice
-
-
-
-
+Finally, thanks to Mr. Dierolf for the idea and also Mr. Miller for advice.
