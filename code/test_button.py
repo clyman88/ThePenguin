@@ -19,18 +19,18 @@ def button_callback(channel):
 GPIO.setwarnings(False) # Ignore warning for now
 GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
 
-GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
+GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
 
 
 # Set servo to pin number
-servo = Servo(25)
+servo = Servo(21)
 
 # Code starts out with the servo arms fully extended.
 # Min = extended. Max = retracted.
 servo.min()
 
 while True:
-  if GPIO.input(10) == GPIO.HIGH:
+  if GPIO.input(16) == GPIO.LOW:
           print("Button was pushed!")
           time.sleep(1)
         
