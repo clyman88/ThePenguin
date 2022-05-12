@@ -46,4 +46,20 @@ while True:
           
           # break
           # Should go back to activating at button press
-  
+                
+# For when the MPU 6050 is added...
+# sudo pip3 install adafruit-circuitpython-mpu6050
+# Link for sources:
+# https://learn.adafruit.com/mpu6050-6-dof-accelerometer-and-gyro/python-and-circuitpython
+# https://raspberrypihq.com/use-a-push-button-with-raspberry-pi-gpio/
+
+#import adafruit_mpu6050
+
+#i2c = board.I2C()
+#mpu = adafruit_mpu6050.MPU6050(i2c)
+# while True:
+    #print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2" % (mpu.acceleration))
+    #print("Gyro X:%.2f, Y: %.2f, Z: %.2f rad/s" % (mpu.gyro))
+    #print("Temperature: %.2f C" % mpu.temperature)
+    #print("")
+    #time.sleep(1)
