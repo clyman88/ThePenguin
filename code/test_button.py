@@ -63,3 +63,5 @@ while True:
     #print("Temperature: %.2f C" % mpu.temperature)
     #print("")
     #time.sleep(1)
+    
+# https://learn.adafruit.com/adafruit-powerboost-500-plus-charger/on-slash-off-switch
