@@ -23,7 +23,7 @@ GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Set pin 10 to be an input pi
 
 
 # Set servo to pin number
-servo = Servo(21)
+servo = Servo(13)
 
 # Code starts out with the servo arms fully extended.
 # Min = extended. Max = retracted.
