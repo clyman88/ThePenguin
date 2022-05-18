@@ -9,7 +9,7 @@ from gpiozero import Servo
 from time import sleep
 
 # Import GPIO library for push button
-import RPi.GPIO as GPIO 
+import RPi.GPIO as GPIO
 
 # Specify push-button parameters:
 
@@ -17,32 +17,37 @@ def button_callback(channel):
     print("Button was pushed!") # Test code to make sure button works
     
 GPIO.setwarnings(False) # Ignore warning for now
-GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
+GPIO.setmode(GPIO.BCM) # Use physical pin numbering
 
 GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
+#GPIO.setup(13, GPIO.OUT)
 
-
+#button = GPIO.input(16)
 # Set servo to pin number
 servo = Servo(13)
 
 # Code starts out with the servo arms fully extended.
 # Min = extended. Max = retracted.
-servo.min()
+
+# Troubleshoot message
+print("Testing")
+
+servo.value = -0.8
 
 while True:
   if GPIO.input(16) == GPIO.LOW:
           print("Button was pushed!")
-          time.sleep(1)
-        
+          sleep(1)
+          #not time.sleep because of the import syntax
           print("Servo retracts in five")
-          time.sleep(5)
+          sleep(5)
           
           print("Servo retracting...")
-          servo.max()
+          servo.value = 0.8
           
-          time.sleep(3)
+          sleep(3)
           print("Back to extended")
-          servo.min()
+          servo.value = -0.8
           
           # break
           # Should go back to activating at button press
