@@ -20,7 +20,7 @@ GPIO.setwarnings(False) # Ignore warning for now
 GPIO.setmode(GPIO.BCM) # Use physical pin numbering
 
 GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
-#GPIO.setup(13, GPIO.OUT)
+#GPIO.setup(13, GPIO.IN)
 
 #button = GPIO.input(16)
 # Set servo to pin number
@@ -45,7 +45,7 @@ while True:
           print("Servo retracting...")
           servo.value = 0.8
           
-          sleep(3)
+          sleep(5)
           print("Back to extended")
           servo.value = -0.8
           
