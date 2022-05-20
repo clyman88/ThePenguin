@@ -45,10 +45,11 @@ while True:
           print("Servo retracting...")
           servo.value = 0.8
           
-          #sleep(5)
+          sleep(5)
           #print("Back to extended")
-          #servo.value = -0.8
-          
+          servo.value = -0.8
+          # Including this so that the servo can be extended for next the next run for testing.  
+        
           break
           # Should go back to activating at button press
                 
