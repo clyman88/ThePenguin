@@ -1,4 +1,4 @@
-# ThePenguin
+# ThePenguin - Project Proposal
 
 #### Link to Google Doc: [Here](https://docs.google.com/document/d/1Sf24Mtsomg_Ii05QBMTFbYv3pOCejpcIwBJ-gdY9PqM/edit?usp=sharing)
 
