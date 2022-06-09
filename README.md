@@ -1,59 +1,69 @@
-# ThePenguin
+# ThePenguin - Final Submission
+
+## This README contains a summary and reflection of our Pi in the Ski Project: The Penguin
 
 #### Link to Google Doc: [Here](https://docs.google.com/document/d/1Sf24Mtsomg_Ii05QBMTFbYv3pOCejpcIwBJ-gdY9PqM/edit?usp=sharing)
+This doc was used in the inital planning/brainstorm of the project.
 
 #### Link to Schedule: [Here](https://docs.google.com/spreadsheets/d/1rT3I_5nSTPqYd5fbr5m2Sy22h2AO5hXBsvJUreVN8uk/edit?usp=sharing)
+This was the schedule we created at the beginning of the year. While we ended up straying off from our initial deadlines, we compared our initial plan to what actually happened and were able to reflect on what we could have done better as a result. 
 
 
-## The Problem & Solution
+## Overview of the Project & Design Decisions
 
-The goal of this project is to map the flight path of a payload dropped by a kite. How would this be helpful or practical? Consider a skydiver jumping out of a plane, or a rocket part returning back to earth from orbit. Wind patterns make it really difficult to predict where exactly a payload will land when it travels down to the ground. But it’s useful to be able to estimate this, since it allows for the payload to be collected and for its flight path to be recorded. This project aims to do this by using a gyroscope to map the 3D path of a payload dropped from a kite that’ll reach the ground using a parachute.
-
-
-## Scope
-
-The project will consist of three main parts:
-A delta kite (the lift), an outside box (the payload container), inner box (the data-recording payload)
-
-In addition to this, there’ll be a pivacek carabiner to tie the outer box to the kite, suspending it with a network of strings, a release mechanism for the payload to drop (this will involve a servo), and a parachute.
-
-The coding challenge will be in learning how to use the gyroscope, and for the CAD it’ll be designing the boxes (likely using wood) as well as designing the servo mechanism. 
-
-If the scope of the project is too big, we’ll scale down to only using the outside box and not using a payload; only the 3D flight of the kite would be mapped.
+Should include a history of our drawings/sketches.
+How the arm lengths had to be changed. 
+How the holes were to two small for the usb chargers to fit into. 
+Switching from two servos to one servo -- being more efficient
 
 
-## Risk Mitigation
+## Constructing the Box / Materials Used
 
-The main risk will be in dropping the payload so that it isn’t damaged and in making sure the parachute works so that the payload lands down smoothly. Here are the different release mechanisms we’re considering:
+### The initial materials used that we planned was as follows:
+- Kite materials: delta kite, kite line, & a handle
+- Wood planks from the Sigma Lab (anchored using glue, T-slots, or tape. Both the outer- and inner-box will be made of wood.
+- 3 medium sized washers and string/line to link them
+- 2 picavet carabringers
+- Hardware: Raspberry Pi, gyroscope, servo, and battery
+- 4 eye screws
+- Fabric for the parachute
+- Some gloves to prevent rug burn from the kite
 
-![Release_Mechanism_Ideas](https://github.com/clyman88/ThePenguin/blob/main/media/IMG_7485.JPG)
+### These were the materials incorporated into the final version:
+- The kite, string, and handle. We stuck with a delta kite and bought a kite set from Amazon. 
+- Acryllic from the sigma lab. Acryllic was lighter and more vertasile than wood, as it was easier to laser cut and put together. Acryllic was used for both the inner box and outer box.
+- Hardware: Raspberry Pi, gryoscope (mpu 6050), two micro servos, a rechargeable battery pack, power boost 500c, and a button, and a power switch. The powerboost, button, and power switch were all added so that the project could work without being plugged into a computer, which was neccesary for it to fly. Having a rechargeable battery and switch also made the project set up much easier, though we did not know that a red light on the power switch meant low battery (we learned the hard way in the 1st launch)
+- Instead of eye screws, which would have protruded for the outer box and have been laced with string, we used an easier solution: simply cutting holes in the outer box in a cross formation and then tying the 2 picavet carabringers using them. 
+- Finally, we borrowed our parachute initially from Max Sweet and then finally from Alden Dent and William Keenan due to lack of time. The parachute was held in place by threading the four strings through holes in the inner box and then tying a knot to lock them in place.
+
+## The circuit diagram and final code:
+
+### Circuit Diagram
+![Circuit Diagram](./media/circuit_diagram)
+
+### Commented code
+[Final code](./code/project_code.py)
+Here is the link to the csv file we recorded during our flight: [Final csv](./code/data.csv)
 
 
-## How Code Will Work
+## OnShape Work / CAD Renderings
 
-The code for this project will involve learning how to use a gyroscope (basically, a souped-up accelerometer that is able to record an object's path through space) and coding the servo(s) to release the payload. At a certain elevation or time limit, the servo will activate, dropping the payload. If there’s spare time, to take this a step further, the servo could be activated with a remote signal.
+Insert pictures of the OnShape views of the project
 
 
-## Design
+## Problems Overcame / Lessons Learned
 
-Here is how the project will look:
+* The primary lesson that we took away from this project is that it tends to be better to not leave final tweaks and design changes to the last few days. We should have worked faster and stuck more diligently to the schedule we had created. If we had, we would have been more structured and driven, knowing what we had to work on each day. Because we did stray off our schedule, we got behind and had to make some last minute changes (i.e. fixing servo jitter before launch, charging/changing batteries the day of launch, allowing the code permission to create a .csv file as a daemon (thanks to Alden Dent for helping fix this). 
 
-![Penguin Diagrams](https://github.com/clyman88/ThePenguin/blob/main/media/IMG_7484.jpg)
+* At first, the kite wasn't going high enough to stay in the air. We fixed this problem by testing several different lengths of the payload from the kite and recording the best one. This helped us establish a standard for where we would put the payload. 
 
-This is how the picavet carabiner will attach the outer box:
+* For the code, it was initially tricky to print both the acceleration and gyro data from the mpu onto the same line of a csv row each iteration. This was because the mpu data was formatted as tuples of strings. To solve this, we had to Google the differences between lists and tuples and what a '%.2f' meant (inserting a variable with two decimals), and look into the library of the mpu. The IDE PyCharm was very helpful in solving this, as it made it easy to access the mpu library and see how the data was formatted.
 
-![Picavet_Mechanism](/media/Picavet.gif)
+* Pi  upload and recharging holes -- we designed holes that were supposed to be large enough to fit the metal part of a USB cord, but it turns out that the holes had to larger still to fit the rubber encasing of a USB cord. We did not have time to change our design for this, so we had to take off the walls each time. 
 
-## Resources / Bill of Materials:
+* The design initially used two servos to retract the inner box while also suspending it. However, Mr. Miller and Mr. H offered us their engineering wisdom in explaining that we only had to use one servo to turn two racks. This was indeed a much more practical method, so we redesigned the box with one servo in the middle.
 
-* Kite materials: [delta kite, kite line, & a handle](https://www.amazon.com/Breeze-Rainbow-Conyne-Delta-6-Feet/dp/B00C9T4HDG/ref=sr_1_2?crid=XFQJCKMACLOF&keywords=7%2Bfoot%2Bdelta%2Bkite&qid=1644852021&sprefix=7%2Bfoot%2Bdelta%2Bkite%2Caps%2C76&sr=8-2&th=1) 
-* Wood planks from the Sigma Lab (anchored using glue, T-slots, or tape. Both the outer- and inner-box will be made of wood.
-* 3 medium sized washers and string/line to link them
-* 2 picavet carabringers
-* Hardware: Raspberry Pi, gyroscope, servo, and battery
-* 4 eye screws 
-* Fabric for the parachute
-* Some gloves to prevent rug burn from the kite
+* The initial servo racks did not fit their correponding rails, meaning the servo could not retract. We fixed this by sandpapering the rails to be larger and then later on recuting the servo racks to be the correct size. We also laser cut several racks so that we would have spares in case on broke. 
 
 
 ## Credit/Inspiration:
