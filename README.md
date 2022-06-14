@@ -11,6 +11,18 @@ This was the schedule we created at the beginning of the year. While we ended up
 
 ## Overview of the Project & Design Decisions
 
+Our initial brainstorming for the Pi in the Ski Project consisted of several different ideas: a trebuchet, rocket, baloon, and kite. We first ruled out trebuchet for technicality and past track record (with successful projects taking more time and reasources than we had). After that, we ruled out rockets for being unoriginal and baloons (we were thinking of a helium space baloon) for being too costly. 
+
+Once we had chosen to use a kite in our project, an idea reccomended by Mr. Dierolf that was original and unexplored, there were several different mechanisms we thought of as is shown below:
+![Brainstorm](./media/IMG_7485.JPG)
+
+Unfortunatley, we conceded that using swords or other more dangerous means would probably be unsuccesful, so we chose a mechanism employing servos (like a hinge or suspension) and a parachute. Below is what we planned out:
+
+![Brainstorm](./media/IMG_7484.jpg)
+
+The project consisted of main sections: the kite, outer box / frame, and payload (containing the servo). The code section of the project was ambitious in that we hoped to record acceleration and gyro data of the kite's flight with an mpu 6050 and then, the difficult part, creating a 3D model of the kite's flight with the data. The code part of the project was not too dificult. We had to create a csv file that opened when the kite was launched, and the mpu 6050 would trasmit its data over intervals into the csv until a button on the box was pressed signaling shutdown.  
+
+
 Should include a history of our drawings/sketches.
 How the arm lengths had to be changed. 
 How the holes were to two small for the usb chargers to fit into. 
@@ -39,7 +51,9 @@ Switching from two servos to one servo -- being more efficient
 ## The circuit diagram and final code:
 
 ### Circuit Diagram
-![Circuit Diagram](./media/circuit_diagram)
+![Circuit Diagram1](./media/circuit1)
+![Circuit Diagram2](./media/circuit2)
+![Circuit Diagram2](./media/circuit3)
 
 ### Commented code
 [Final code](./code/project_code.py)
@@ -48,7 +62,9 @@ Here is the link to the csv file we recorded during our flight: [Final csv](./co
 
 ## OnShape Work / CAD Renderings
 
-Insert pictures of the OnShape views of the project
+![Isometic](./media/isometric)
+![Top](./media/top)
+![Front](./media/front)
 
 
 ## Problems Overcame / Lessons Learned
